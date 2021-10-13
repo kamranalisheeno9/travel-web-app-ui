@@ -19,12 +19,11 @@ const NavbarComp = (props) => {
                 <Nav.Link href="#HomeMenu" className="menu-dropdown">Home</Nav.Link>
                 <Nav.Link href="#About" className="menu-dropdown">About</Nav.Link>
                 <Nav.Link href="#Tour" className="menu-dropdown">Tour Menu</Nav.Link>
-                <Nav.Link href="#SignIn" className="menu-dropdown">Sign In</Nav.Link>
-                <Nav.Link href="#SignIn" className="menu-dropdown">Sign Up</Nav.Link>
-                <Nav.Link href="#Policies" className="menu-dropdown">Company Policies</Nav.Link>
                 <Nav.Link href="#Contact" className="menu-dropdown">Contact</Nav.Link>
                 <Nav.Link href="#Organization" className="menu-dropdown">Organization Control</Nav.Link>
-
+                <Nav.Link href="#Policies" className="menu-dropdown">Company Policies</Nav.Link>
+                <Nav.Link href="#Login" className="menu-dropdown">Login</Nav.Link>
+                <Nav.Link href="#Signup" className="menu-dropdown">Sign Up</Nav.Link>
               </Nav>
               <Nav >
                 <Nav.Link href="#contact-number" className=" contact-nbr">+65 XXXX XXXX</Nav.Link>
