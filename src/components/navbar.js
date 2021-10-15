@@ -1,6 +1,12 @@
 import React from 'react';
 import './navbar.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import { Container, Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 import { ImSearch } from 'react-icons/im';
 import { useState } from 'react';
@@ -16,8 +22,8 @@ const NavbarComp = (props) => {
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto"  >
 
-                <Nav.Link href="#HomeMenu" className="menu-dropdown">Home</Nav.Link>
-                <Nav.Link href="#About" className="menu-dropdown">About</Nav.Link>
+                <Nav.Link href="#HomeMenu" className="menu-dropdown"><Link className="nav-bar-link" to="/">Home</Link></Nav.Link>
+                <Nav.Link href="#About" className="menu-dropdown"><Link className="nav-bar-link" to="/about">About</Link></Nav.Link>
                 <Nav.Link href="#Tour" className="menu-dropdown">Tour Menu</Nav.Link>
                 <Nav.Link href="#Contact" className="menu-dropdown">Contact</Nav.Link>
                 <Nav.Link href="#Organization" className="menu-dropdown">Organization Control</Nav.Link>

@@ -7,7 +7,7 @@ import SearchAvailablity from '../components/availability';
 import Gallery from '../components/gallery';
 import PackageCard from '../components/packageCard';
 import { useState } from 'react';
-const Layout = () => {
+const HomePage = () => {
 
 
   return (
@@ -28,4 +28,4 @@ const Layout = () => {
   );
 }
 
-export default Layout;
+export default HomePage;

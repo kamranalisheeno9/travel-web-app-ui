@@ -32,6 +32,7 @@
 }
 .header-link:hover{
     color: rgb(170, 170, 170) !important;
+
 }
 .social-links{
     display: flex;
@@ -57,4 +58,14 @@
 }
 .cards{
     padding-left: 5%;
+}
+.footer-bar-link{
+    text-decoration: none;
+    color: rgba(255,255,255,.55);
+
+}
+.footer-bar-link:hover{
+    color: #696969;
+
+
 }
