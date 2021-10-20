@@ -3,19 +3,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
 
-.about-page{
-    background-image: url('https://pix.avax.news/avaxnews/25/4f/00014f25.jpeg');
+.procedure-page{
+    background-image: url('https://wallpapercave.com/wp/pjPwSEV.jpg');
     background-size: cover;
     min-height: 60vh;
     
 }
-.about-page-layer{
+.procedure-page-layer{
     background-color: rgba(0, 0, 0, 0.45);
     min-height: 60vh;
     
     
 }
-.about-title{
+.main-procedure-container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.procedure-title{
     font-size: 50px;
     color: white;
     text-align: center;
@@ -25,21 +29,40 @@
     letter-spacing: 5px;
     font-family: 'Roboto Condensed', sans-serif;
 }
+.main-procedure-title{
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    margin: 2%;
+}
+.inner-main-procedure-title{
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    margin: 2%;
+}
+.procedure-text{
+    font-family: 'Nunito Sans', sans-serif;
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 2%;
+    font-size: 17px;
+
+}
 
 @media only screen and (max-width:470px) {
     
-    .about-page{
+    .procedure-page{
         min-height: 40vh;
         
     }
-    .about-page-layer{
+    .procedure-page-layer{
         min-height: 40vh;
         
         
     }
-    .about-title{
-        transform: translate(0%, 120%) !important;
-    font-size: 45px;
+    .procedure-title{
+        transform: translate(0%, 60%) !important;
+    font-size: 40px;
 
     }
     

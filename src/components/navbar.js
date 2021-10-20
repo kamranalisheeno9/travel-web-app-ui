@@ -17,19 +17,19 @@ const NavbarComp = (props) => {
       <Container fluid className="nav">
         <Container fluid className="nav-bar"  >
           <Navbar expand="xl" collapseOnSelect={true} variant="dark" >
-            <Navbar.Brand href="#mainpage" className="logo">ABC</Navbar.Brand>
+            <Navbar.Brand href="/" className="logo">ABC</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto"  >
 
-                <Nav.Link href="#HomeMenu" className="menu-dropdown"><Link className="nav-bar-link" to="/">Home</Link></Nav.Link>
-                <Nav.Link href="#About" className="menu-dropdown"><Link className="nav-bar-link" to="/about">About</Link></Nav.Link>
-                <Nav.Link href="#Tour" className="menu-dropdown">Tour Menu</Nav.Link>
-                <Nav.Link href="#Contact" className="menu-dropdown">Contact</Nav.Link>
-                <Nav.Link href="#Organization" className="menu-dropdown">Organization Control</Nav.Link>
-                <Nav.Link href="#Policies" className="menu-dropdown">Company Policies</Nav.Link>
-                <Nav.Link href="#Login" className="menu-dropdown">Login</Nav.Link>
-                <Nav.Link href="#Signup" className="menu-dropdown">Sign Up</Nav.Link>
+                <Nav.Link  className="menu-dropdown" href="/" >Home</Nav.Link>
+                <Nav.Link  className="menu-dropdown" href="/about">About</Nav.Link>
+                <Nav.Link  className="menu-dropdown" href="/tourmenu">Tour Menu</Nav.Link>
+                <Nav.Link  className="menu-dropdown">Contact</Nav.Link>
+                <Nav.Link  className="menu-dropdown">Organization Control</Nav.Link>
+                <Nav.Link  className="menu-dropdown">Company Policies</Nav.Link>
+                <Nav.Link  className="menu-dropdown">Login</Nav.Link>
+                <Nav.Link  className="menu-dropdown">Sign Up</Nav.Link>
               </Nav>
               <Nav >
                 <Nav.Link href="#contact-number" className=" contact-nbr">+65 XXXX XXXX</Nav.Link>

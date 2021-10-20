@@ -3,19 +3,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
 
-.about-page{
-    background-image: url('https://pix.avax.news/avaxnews/25/4f/00014f25.jpeg');
+.tour-page{
+    background-image: url('https://wallpaperaccess.com/full/488392.jpg');
     background-size: cover;
     min-height: 60vh;
     
 }
-.about-page-layer{
+.tour-page-layer{
     background-color: rgba(0, 0, 0, 0.45);
     min-height: 60vh;
     
     
 }
-.about-title{
+.tour-title{
     font-size: 50px;
     color: white;
     text-align: center;
@@ -25,22 +25,29 @@
     letter-spacing: 5px;
     font-family: 'Roboto Condensed', sans-serif;
 }
-
+.tour-links{
+    text-decoration: none;
+}
+.tour-menu-col{
+    padding-left: 10px;
+    padding-right: 10px;
+}
 @media only screen and (max-width:470px) {
     
-    .about-page{
+    .tour-page{
         min-height: 40vh;
         
     }
-    .about-page-layer{
+    .tour-page-layer{
         min-height: 40vh;
         
         
     }
-    .about-title{
+    .tour-title{
         transform: translate(0%, 120%) !important;
     font-size: 45px;
 
     }
     
     }
+
