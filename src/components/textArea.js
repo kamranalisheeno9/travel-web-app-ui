@@ -7,7 +7,7 @@ const TextField = ({ ...props }) => {
         <div className="mb-2">
             <Form.Group className="mb-3" controlId="formBasicPassword" >
                 <Form.Label>{props.label}</Form.Label>
-                <Form.Control as="textarea" rows={6}
+                <Form.Control as="textarea" rows={props.size}
                     {...field} {...props}
                     autoComplete="off"
                     className={`form-control shadow-none ${meta.touched && meta.error && 'is-invalid'}`}

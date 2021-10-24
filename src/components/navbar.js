@@ -7,7 +7,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import { Container, Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import { Container, Navbar, Nav, NavDropdown, Dropdown, Form, FormControl, Button } from 'react-bootstrap';
 import { ImSearch } from 'react-icons/im';
 import { useState } from 'react';
 const NavbarComp = (props) => {
@@ -22,17 +22,34 @@ const NavbarComp = (props) => {
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto"  >
 
-                <Nav.Link  className="menu-dropdown" href="/" >Home</Nav.Link>
-                <Nav.Link  className="menu-dropdown" href="/about">About</Nav.Link>
-                <Nav.Link  className="menu-dropdown" href="/tourmenu">Tour Menu</Nav.Link>
-                <Nav.Link  className="menu-dropdown">Contact</Nav.Link>
-                <Nav.Link  className="menu-dropdown">Organization Control</Nav.Link>
-                <Nav.Link  className="menu-dropdown">Company Policies</Nav.Link>
-                <Nav.Link  className="menu-dropdown">Login</Nav.Link>
-                <Nav.Link  className="menu-dropdown">Sign Up</Nav.Link>
+                <Nav.Link className="menu-dropdown" href="/" >Home</Nav.Link>
+                <Nav.Link className="menu-dropdown" href="/about">About</Nav.Link>
+                <Dropdown>
+                  <Dropdown.Toggle className="nav-bar-link dropdown-btn" id="dropdown-basic">
+                    Tour Menu
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu className="dropdown-value">
+                    <Dropdown.Item href="/tourprocedure" >Tour Procedure</Dropdown.Item>
+                    <Dropdown.Item href="/booktour">Book a Tour</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+                <Nav.Link className="menu-dropdown" href="/policies">Policies</Nav.Link>
+                <Nav.Link className="menu-dropdown" href="/contactus">Contact Us</Nav.Link>
+                <Dropdown>
+                  <Dropdown.Toggle className="nav-bar-link dropdown-btn" id="dropdown-basic">
+                    Sign In
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu className="dropdown-value">
+                    <Dropdown.Item href="/signin">Sign In</Dropdown.Item>
+                    <Dropdown.Item href="/signup">Sign Up</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+                <Nav.Link className="menu-dropdown">User Acount Control</Nav.Link>
               </Nav>
               <Nav >
-                <Nav.Link href="#contact-number" className=" contact-nbr">+65 XXXX XXXX</Nav.Link>
+                <Nav.Link href="#contact-number" className=" contact-nbr">077-123-4567</Nav.Link>
                 <Form className="d-flex search-nav">
                   <FormControl
                     type="search"

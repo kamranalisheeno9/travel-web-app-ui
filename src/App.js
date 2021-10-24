@@ -7,9 +7,11 @@ import {
 } from "react-router-dom";
 import HomePage from './pages/homepage'
 import AboutPage from './pages/aboutpage'
-import TourPage from './pages/tourmenu'
 import TourProcedure from './pages/tourprocedure'
 import CustomerInquiry from './pages/customerinquiry'
+import ContactUs from './pages/contactus'
+import Policies from './pages/policies'
+import BookTour from './pages/booktour'
 import ScrollToTop from './components/ScrollToTop'
 
 function App() {
@@ -17,6 +19,18 @@ function App() {
     <Router>
       <ScrollToTop />
       <Switch>
+        <Route path="/booktour">
+          
+          <BookTour />
+        </Route>
+        <Route path="/policies">
+          
+          <Policies />
+        </Route>
+        <Route path="/contactus">
+          
+          <ContactUs />
+        </Route>
         <Route path="/customerinquiry">
           
           <CustomerInquiry />
@@ -25,10 +39,7 @@ function App() {
           
           <TourProcedure />
         </Route>
-        <Route path="/tourmenu">
-          
-          <TourPage />
-        </Route>
+      
         <Route path="/about">
           
           <AboutPage />

@@ -11,7 +11,6 @@ const TextField = ({ ...props }) => {
                     {...field} {...props}
                     autoComplete="off"
                     className={`form-control shadow-none ${meta.touched && meta.error && 'is-invalid'}`}
-
                 />
                 <ErrorMessage name={field.name} />
             </Form.Group>

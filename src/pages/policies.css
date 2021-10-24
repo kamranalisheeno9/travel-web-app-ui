@@ -3,19 +3,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
 
-.tour-page{
-    background-image: url('https://wallpaperaccess.com/full/488392.jpg');
+.policies-page{
+    background-image: url('https://letsvisitkashmir.files.wordpress.com/2021/01/budhism-chumathang-countryside-explore-wallpaper-preview.jpg');
     background-size: cover;
     min-height: 60vh;
     
 }
-.tour-page-layer{
+.policies-page-layer{
     background-color: rgba(0, 0, 0, 0.45);
     min-height: 60vh;
     
     
 }
-.tour-title{
+.policies-title{
     font-size: 50px;
     color: white;
     text-align: center;
@@ -25,29 +25,14 @@
     letter-spacing: 5px;
     font-family: 'Roboto Condensed', sans-serif;
 }
-.tour-links{
-    text-decoration: none;
+.terms-conditions{
+    text-align: center;
+    width: fit-content;
+    margin: 0px auto;
+    margin-top: 20px;
+    line-height: 40px;
 }
-.tour-menu-col{
-    padding-left: 10px;
-    padding-right: 10px;
+.policies-container{
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
-@media only screen and (max-width:470px) {
-    
-    .tour-page{
-        min-height: 40vh;
-        
-    }
-    .tour-page-layer{
-        min-height: 40vh;
-        
-        
-    }
-    .tour-title{
-        transform: translate(0%, 120%) !important;
-    font-size: 45px;
-
-    }
-    
-    }
-

@@ -21,7 +21,7 @@ const HomePage = () => {
         <Title />
         <SearchAvailablity />
         <Gallery />
-        <PackageCard />
+        <PackageCard   />
         <FooterComp />
       </div>
     </>
