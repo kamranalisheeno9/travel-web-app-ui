@@ -13,6 +13,12 @@
     cursor: pointer;
     transition: 0.2s all linear;
     float: right;
+    border: none;
+
+}
+.book-package a{
+    text-decoration: none;
+    color: white;
 }
 .tour-price{
     text-align: left;

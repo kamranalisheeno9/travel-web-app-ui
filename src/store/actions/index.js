@@ -1,23 +1,12 @@
 import {React,useState} from 'react'
-export const getProducts =(products,currentProduct)=>{
+export const getProducts =(currentPackage)=>{
     return(dispatch)=>{
-        const product =products
-            dispatch({
-                type:"ADDPRODUCTS",
-                payload:product
-    
-
-            })
-
-            const currentP=currentProduct
-                
+            
                 dispatch({
-                    type:"ADDCURRENT",
-                    payload:currentP
+                    type:"ADDCURRENTPACKAGE",
+                    payload:currentPackage
         
                 })
-            
-                // console.log(currentP)
         
     }
 }

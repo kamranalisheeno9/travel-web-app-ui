@@ -21,12 +21,12 @@ const NavbarComp = (props) => {
           <li className="header-link">Navigation Links</li>
           <li><Link className="footer-bar-link" to="/">Home</Link></li>
           <li><Link className="footer-bar-link" to="/about">About</Link></li>
-          <li><Link className="footer-bar-link" to="/tour">Tour Menu</Link></li>
-          <li><Link className="footer-bar-link" to="/login">Login</Link></li>
+          <li><Link className="footer-bar-link" to="/tourprocedure">Tour Menu</Link></li>
+          <li><Link className="footer-bar-link" to="/signin">Login</Link></li>
           <li><Link className="footer-bar-link" to="/signup">Sign Up</Link></li>
           <li><Link className="footer-bar-link" to="/policies">Company Policies</Link></li>
-          <li><Link className="footer-bar-link" to="/contact">Contact Menu</Link></li>
-          <li><Link className="footer-bar-link" to="/organization">Organization Control</Link></li>
+          <li><Link className="footer-bar-link" to="/contactus">Contact Menu</Link></li>
+          <li><Link className="footer-bar-link" to="/useraccount">Organization Control</Link></li>
         </ul>
       </Col>
       <Col md={3} sm={6}>

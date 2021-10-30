@@ -1,11 +1,22 @@
 import './booktour.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Navbar, Nav, Row, Col, } from 'react-bootstrap';
+import { Container, Tabs, Tab, Row, Col,Form,Button } from 'react-bootstrap';
 import NavbarComp from '../components/navbar';
 import FooterComp from '../components/footer';
 import PackageCard from '../components/card';
+import DatePicker from "react-datepicker";
 import { useState } from 'react';
-const AboutPage = () => {
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+const BookTour = () => {
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
+  
+  const [check,setCheck]=useState(false)
   return (
     <>
       
@@ -19,45 +30,151 @@ const AboutPage = () => {
       <p className="booktour-title">Book a Tour</p>
     </div>
     </div>
-    <Container>
+
+
+    <Tabs
+  defaultActiveKey="packages"
+  transition={false}
+  id="noanim-tab-example"
+  className="mb-3 procedure-tabs  "
+>
+  <Tab eventKey="packages" title="Tour Packages">
+  <Container>
       <Row>
         <Col lg={3} md={4} sm={6}>
-      <PackageCard  name="Package 1" code="Code CTP01" price="150000" image={'https://c0.wallpaperflare.com/preview/902/241/146/egypt-tour-packages-egypt-packages-egypt-vacation-packages-egypt-holidays.jpg'} />
+      <PackageCard  name="Package 1" code="CTP01" price="150000" duration="8 Nights" schedule="Sunday"activity="Hiking"  image={'https://c0.wallpaperflare.com/preview/902/241/146/egypt-tour-packages-egypt-packages-egypt-vacation-packages-egypt-holidays.jpg'} />
         
         </Col>
         <Col lg={3} md={4} sm={6}>
-      <PackageCard  name="Package 2" code="Code CTP02" price="100000" image={'https://eskipaper.com/images/australia-4.jpg'} />
+      <PackageCard  name="Package 2" code="CTP02" price="100000" duration="4 Nights" schedule="Friday" activity="Mountain Climb"  image={'https://eskipaper.com/images/australia-4.jpg'} />
         
         </Col>
         <Col lg={3} md={4} sm={6}>
-      <PackageCard  name="Package 3" code="Code CTP03" price="500000" image={'https://www.teahub.io/photos/full/277-2776548_beach-photo-tourist-place-in-india-hd.jpg'} />
+      <PackageCard  name="Package 3" code="CTP03" price="500000" duration="2 Nights" schedule="Monday" activity="Fishing"  image={'https://www.teahub.io/photos/full/277-2776548_beach-photo-tourist-place-in-india-hd.jpg'} />
         
         </Col>
         <Col lg={3} md={4} sm={6}>
-      <PackageCard  name="Package 4" code="Code CTP04" price="120000" image={'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&w=1000&q=80'} />
+      <PackageCard  name="Package 4" code="CTP04" price="120000" duration="5 Nights" schedule="Friday" activity="Hiking"  image={'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&w=1000&q=80'} />
         
         </Col>
         <Col lg={3} md={4} sm={6}>
-      <PackageCard  name="Package 1" code="Code CTP01" price="150000" image={'https://premiotravels.com/wp-content/uploads/2021/07/5-Days-EID-UL-ADHA-in-Canada-Holiday-Travel-Tour-Package-scaled.jpg'} />
+      <PackageCard  name="Package 5" code="CTP05" price="150000" duration="5 Nights" schedule="Saturday" activity="Para Gliding"  image={'https://premiotravels.com/wp-content/uploads/2021/07/5-Days-EID-UL-ADHA-in-Canada-Holiday-Travel-Tour-Package-scaled.jpg'} />
         
         </Col>
         <Col lg={3} md={4} sm={6}>
-      <PackageCard  name="Package 2" code="Code CTP02" price="100000" image={'https://img.traveltriangle.com/attachments/pictures/1104679/original/Myanmar_temples_in_the_Bagan_Archaeological_Zone__Myanmar..jpg?tr=w-583,h-406'} />
+      <PackageCard  name="Package 6" code="CTP06" price="100000" duration="8 Nights" schedule="Friday" activity="Hiking"  image={'https://img.traveltriangle.com/attachments/pictures/1104679/original/Myanmar_temples_in_the_Bagan_Archaeological_Zone__Myanmar..jpg?tr=w-583,h-406'} />
         
         </Col>
         <Col lg={3} md={4} sm={6}>
-      <PackageCard  name="Package 3" code="Code CTP03" price="500000" image={'https://5.imimg.com/data5/UR/PW/HY/SELLER-44050990/ayodhya-tour-packages-500x500.jpg'} />
+      <PackageCard  name="Package 7" code="CTP07" price="500000" duration="6 Nights" schedule="Thursday" activity="Swim"  image={'https://5.imimg.com/data5/UR/PW/HY/SELLER-44050990/ayodhya-tour-packages-500x500.jpg'} />
         
         </Col>
         <Col lg={3} md={4} sm={6}>
-      <PackageCard  name="Package 4" code="Code CTP04" price="120000" image={'https://www.teahub.io/photos/full/35-355802_beautiful-city-in-turkey.jpg'} />
+      <PackageCard  name="Package 8" code="CTP08" price="120000" duration="3 Nights" schedule="Monday" activity="Ski Diving"  image={'https://www.teahub.io/photos/full/35-355802_beautiful-city-in-turkey.jpg'} />
         
         </Col>
               </Row>
     </Container>
-      <FooterComp />
+  </Tab>
+  <Tab eventKey="customize"  title="Customize Tour Packages">
+    <Container className="customize-container" >
+      <h6>Customize a Package as you wish</h6>
+      <Row className="customize-tour-container">
+    <Col md={3} xs={4} className="customize-title">
+      <p>Country</p>
+      <p>Country Area</p>
+      <p>Hotels(s)</p>
+      <p>Activities(ies)</p>
+      <p>No of People</p>
+      <p>Date</p>
+      <p>Number of Nights</p>
+    </Col>
+    <Col md={4} xs={8} className="customize-value">
+<div>
+    <Form.Select className="mb-2 mt-2" aria-label="Default select example">
+  <option>Select Country</option>
+  <option value="country1">Country 1</option>
+  <option value="country2">Country 2</option>
+  <option value="country3">Country 3</option>
+</Form.Select>
+
+</div>
+<div >
+    <Form.Select className="mb-2 mt-2" aria-label="Default select example">
+  <option>Select Location</option>
+  <option value="Location1">Location 1</option>
+  <option value="Location2">Location 2</option>
+  <option value="Location3">Location 3</option>
+</Form.Select>
+
+</div>
+<div className="two-options">
+    <Form.Select className="mb-2 mt-2" aria-label="Default select example">
+  <option>Select Hotel 1</option>
+  <option value="Hotel1">Hotel 1</option>
+  <option value="Hotel2">Hotel 2</option>
+</Form.Select>
+    <Form.Select className="mb-2 mt-2" aria-label="Default select example">
+    <option>Select Hotel 2</option>
+  <option value="Hotel1">Hotel 1</option>
+  <option value="Hotel2">Hotel 2</option>
+</Form.Select>
+
+
+</div>
+<div className="two-options">
+    <Form.Select className="mb-2 mt-2" aria-label="Default select example">
+  <option>No of People</option>
+  <option value="5">5</option>
+  <option value="10">10</option>
+  <option value="20">20</option>
+</Form.Select>
+
+
+</div>
+<div className="two-options">
+  <DatePicker className="mb-2 mt-2 date" className="date-picker"   selected={startDate} onChange={(date) => setStartDate(date)} />
+
+  <DatePicker className="mb-2 mt-2 date" className="date-picker"   selected={endDate} onChange={(date) => setEndDate(date)} />
+
+
+</div>
+<div className="two-options">
+<Form.Select className="mb-2 mt-2" aria-label="Default select example">
+  <option>No of Nights</option>
+  <option value="4">4</option>
+  <option value="8">8</option>
+  <option value="10">10</option>
+</Form.Select>
+
+</div>
+
+
+    </Col>
+    <Col md={4}></Col>
+    <Row>
+      <Col md={8}>
+
+    <Form.Check type="checkbox" value={check} onChange={(e)=>setCheck(!check)} className="payment-box-inner-text" label="I have read and understood all the terms and conditons and I agree to adhere company policies.  " />
+              </Col>
+              <Col md={4}>
+              <Button className="book-now feedback-btn " type="submit" disabled={check==true ? false: true}> <Link to="/details">Send For Confirmation </Link> </Button>
+
+              </Col>
+</Row>
+  </Row> 
+    
+    </Container>
+ 
+  </Tab>
+ 
+</Tabs>
+
+    
+
+<FooterComp />
 </>
   );
 }
 
-export default AboutPage;
+export default BookTour;

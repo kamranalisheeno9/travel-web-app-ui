@@ -5,7 +5,7 @@ const TextField = ({ ...props }) => {
     const [field, meta] = useField(props)
     return (
         <div className="mb-2">
-            <Form.Group className="mb-3" controlId="formBasicPassword" >
+            <Form.Group  controlId="formBasicPassword" >
                 <Form.Label>{props.label}</Form.Label>
                 <Form.Control as="textarea" rows={props.size}
                     {...field} {...props}

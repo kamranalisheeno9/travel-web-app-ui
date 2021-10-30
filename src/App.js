@@ -12,6 +12,15 @@ import CustomerInquiry from './pages/customerinquiry'
 import ContactUs from './pages/contactus'
 import Policies from './pages/policies'
 import BookTour from './pages/booktour'
+import SignIn from './pages/loginPage'
+import SignUp from './pages/signupPage'
+import PackageDetails from './pages/packagedetails'
+import ConfirmBooking from './pages/bookingconfirmation'
+import ConfirmedPayment from './pages/confirmedpayment'
+import PaymentProceed from './pages/paymentproceed'
+import CancelledPayment from './pages/cancelledpayment'
+import Profile from './pages/profile'
+import UserAccount from './pages/useraccount'
 import ScrollToTop from './components/ScrollToTop'
 
 function App() {
@@ -19,6 +28,42 @@ function App() {
     <Router>
       <ScrollToTop />
       <Switch>
+        <Route path="/useraccount">
+          
+          <UserAccount />
+        </Route>
+        <Route path="/profile">
+          
+          <Profile />
+        </Route>
+        <Route path="/cancelledpayment">
+          
+          <CancelledPayment />
+        </Route>
+        <Route path="/confirmedpayment">
+          
+          <ConfirmedPayment />
+        </Route>
+        <Route path="/paymentproceed">
+          
+          <PaymentProceed />
+        </Route>
+        <Route path="/confirmbooking">
+          
+          <ConfirmBooking />
+        </Route>
+        <Route path="/details">
+          
+          <PackageDetails />
+        </Route>
+        <Route path="/signin">
+          
+          <SignIn />
+        </Route>
+        <Route path="/signup">
+          
+          <SignUp />
+        </Route>
         <Route path="/booktour">
           
           <BookTour />

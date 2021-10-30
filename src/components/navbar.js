@@ -46,7 +46,7 @@ const NavbarComp = (props) => {
                     <Dropdown.Item href="/signup">Sign Up</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
-                <Nav.Link className="menu-dropdown">User Acount Control</Nav.Link>
+                <Nav.Link className="menu-dropdown" href="/useraccount">User Acount Control</Nav.Link>
               </Nav>
               <Nav >
                 <Nav.Link href="#contact-number" className=" contact-nbr">077-123-4567</Nav.Link>
