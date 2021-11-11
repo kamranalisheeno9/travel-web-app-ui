@@ -19,7 +19,16 @@ const UserAccount = () => {
 const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   
+  // Admin
   
+  const [idadmin, setIdadmin] = useState("00218");
+  const [stafffnameadmin, setStaffFnameadmin] = useState("Aanya");
+  const [stafflnameadmin, setStaffLnameadmin] = useState("Peace");
+  const [staffemailadmin, setStaffEmailadmin] = useState("aanya.p@gmail.com");
+  const [staffnumberadmin, setStaffNumberadmin] = useState("071 123 5682");
+  const [staffaddressadmin, setStaffAddressadmin] = useState("Colombo 06, Sri Lanka");
+
+
 // Staff
 
   const [id, setId] = useState("00412");
@@ -276,7 +285,7 @@ const [pprice,setPprice]=useState("XX $")
         variant="secondary"
         title={<BsFillPersonFill />}
       >
-        <Dropdown.Item eventKey="1">Carl Pang</Dropdown.Item>
+        <Dropdown.Item eventKey="1">Aanya Peace</Dropdown.Item>
         
       </DropdownButton>
   </div>
@@ -293,23 +302,23 @@ const [pprice,setPprice]=useState("XX $")
         </Col>
         <Col md={4} xs={6}>
         <p className="input-values">
-        <Form.Control className="staff-input" onChange={(e)=>setId(e.target.value)} type="text" value={id} />
+        <Form.Control className="staff-input" onChange={(e)=>setIdadmin(e.target.value)} type="text" value={idadmin} />
           </p>
         <p className="input-values">
-        <Form.Control className="staff-input" onChange={(e)=>setStaffFname(e.target.value)} type="text" value={stafffname} />
+        <Form.Control className="staff-input" onChange={(e)=>setStaffFnameadmin(e.target.value)} type="text" value={stafffnameadmin} />
           </p>
         <p className="input-values">
-        <Form.Control className="staff-input" onChange={(e)=>setStaffLname(e.target.value)} type="text" value={stafflname} />
+        <Form.Control className="staff-input" onChange={(e)=>setStaffLnameadmin(e.target.value)} type="text" value={stafflnameadmin} />
           </p>
         <p className="input-values">
-        <Form.Control className="staff-input" onChange={(e)=>setStaffEmail(e.target.value)} type="text" value={staffemail} />
+        <Form.Control className="staff-input" onChange={(e)=>setStaffEmailadmin(e.target.value)} type="text" value={staffemailadmin} />
           </p>
         <p className="input-values">
-        <Form.Control className="staff-input" onChange={(e)=>setStaffNumber(e.target.value)} type="text" value={staffnumber} />
+        <Form.Control className="staff-input" onChange={(e)=>setStaffNumberadmin(e.target.value)} type="text" value={staffnumberadmin} />
           </p>
         
         <p className="input-values">
-        <Form.Control className="staff-input" onChange={(e)=>setStaffAddress(e.target.value)} type="text" value={staffaddress} />
+        <Form.Control className="staff-input" onChange={(e)=>setStaffAddressadmin(e.target.value)} type="text" value={staffaddressadmin} />
           </p>
         <div >
 
@@ -324,7 +333,7 @@ const [pprice,setPprice]=useState("XX $")
         <Col md={4}  className="profile-image-container">
 
           <img className="profile-image" src={ProfileImage} />
-          <h5>{stafffname} {stafflname}</h5>
+          <h5>{stafffnameadmin} {stafflnameadmin}</h5>
           
           <Button className="profile-update-btn staff-user " onClick={()=>UpdateStaff()} >Update Account
           </Button>
