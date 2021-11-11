@@ -17,36 +17,36 @@ const NavbarComp = (props) => {
       <Container fluid className="nav">
         <Container fluid className="nav-bar"  >
           <Navbar expand="xl" collapseOnSelect={true} variant="dark" >
-            <Navbar.Brand href="/" className="logo">ABC</Navbar.Brand>
+            <Navbar.Brand  className="logo">ABC</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto"  >
 
-                <Nav.Link className="menu-dropdown" href="/" >Home</Nav.Link>
-                <Nav.Link className="menu-dropdown" href="/about">About</Nav.Link>
+                <Nav.Link className="menu-dropdown"  ><Link to="" className="nav-bar-links">Home </Link> </Nav.Link>
+                <Nav.Link className="menu-dropdown"><Link to="about" className="nav-bar-links">About </Link></Nav.Link>
                 <Dropdown>
                   <Dropdown.Toggle className="nav-bar-link dropdown-btn" id="dropdown-basic">
                     Tour Menu
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu className="dropdown-value">
-                    <Dropdown.Item href="/tourprocedure" >Tour Procedure</Dropdown.Item>
-                    <Dropdown.Item href="/booktour">Book a Tour</Dropdown.Item>
+                    <Dropdown.Item  ><Link to="tourprocedure" className="nav-bar-links-toggle">Tour Procedure </Link></Dropdown.Item>
+                    <Dropdown.Item><Link to="booktour" className="nav-bar-links-toggle">Book a Tour</Link></Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
-                <Nav.Link className="menu-dropdown" href="/policies">Policies</Nav.Link>
-                <Nav.Link className="menu-dropdown" href="/contactus">Contact Us</Nav.Link>
+                <Nav.Link className="menu-dropdown" ><Link to="policies" className="nav-bar-links">Book a Tour</Link></Nav.Link>
+                <Nav.Link className="menu-dropdown"><Link to="contactus" className="nav-bar-links">Contact Us</Link></Nav.Link>
                 <Dropdown>
                   <Dropdown.Toggle className="nav-bar-link dropdown-btn" id="dropdown-basic">
                     Sign In
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu className="dropdown-value">
-                    <Dropdown.Item href="/signin">Sign In</Dropdown.Item>
-                    <Dropdown.Item href="/signup">Sign Up</Dropdown.Item>
+                    <Dropdown.Item><Link to="signin" className="nav-bar-links-toggle">Sign In</Link></Dropdown.Item>
+                    <Dropdown.Item><Link to="signup" className="nav-bar-links-toggle">Sign Up</Link></Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
-                <Nav.Link className="menu-dropdown" href="/useraccount">User Acount Control</Nav.Link>
+                <Nav.Link className="menu-dropdown"><Link className="nav-bar-links" to="useraccount">User Acount Control</Link></Nav.Link>
               </Nav>
               <Nav >
                 <Nav.Link href="#contact-number" className=" contact-nbr">077-123-4567</Nav.Link>
