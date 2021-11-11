@@ -34,7 +34,7 @@ const NavbarComp = (props) => {
                     <Dropdown.Item><Link to="booktour" className="nav-bar-links-toggle">Book a Tour</Link></Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
-                <Nav.Link className="menu-dropdown" ><Link to="policies" className="nav-bar-links">Book a Tour</Link></Nav.Link>
+                <Nav.Link className="menu-dropdown" ><Link to="policies" className="nav-bar-links">Policies</Link></Nav.Link>
                 <Nav.Link className="menu-dropdown"><Link to="contactus" className="nav-bar-links">Contact Us</Link></Nav.Link>
                 <Dropdown>
                   <Dropdown.Toggle className="nav-bar-link dropdown-btn" id="dropdown-basic">
