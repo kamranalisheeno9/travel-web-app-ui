@@ -21,6 +21,7 @@ import PaymentProceed from './pages/paymentproceed'
 import CancelledPayment from './pages/cancelledpayment'
 import Profile from './pages/profile'
 import UserAccount from './pages/useraccount'
+import ReservePackage from './pages/reservepackage'
 import ScrollToTop from './components/ScrollToTop'
 
 function App() {
@@ -31,6 +32,10 @@ function App() {
         <Route path="/useraccount">
           
           <UserAccount />
+        </Route>
+        <Route path="/reservepackage">
+          
+          <ReservePackage />
         </Route>
         <Route path="/profile">
           

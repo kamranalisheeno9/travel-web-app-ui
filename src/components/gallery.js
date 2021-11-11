@@ -53,7 +53,7 @@ const Layout = () => {
         </Row>
       </Container>
       <Container>
-        <p className="gallery-titles">Activities</p>
+        <p className="gallery-titles" id="activities">Activities</p>
         <Row>
           <Col className="place-img" sm={6} lg={3}>
             <p> Hiking </p>

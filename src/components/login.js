@@ -6,7 +6,12 @@ import * as yup from 'yup';
 import { Container, Card, ListGroup, Form, Button,Row,Col } from 'react-bootstrap';
 import Forgetpassmodel from './forgetpassmodel';
 import { useState } from 'react';
-
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 const SignUp = () => {
 
     const [currentUser,setCurrentUser]=useState({})
@@ -63,7 +68,12 @@ const SignUp = () => {
                                 <Form onSubmit={formik.handleSubmit}>
                                     <Form.Group className="mb-3 email" controlId="formBasicEmail">
                                         <TextField type="email" name="email" placeholder="Enter email" />
-                                        <Form.Text className="">
+                                        
+                                    </Form.Group>
+
+                                    <Form.Group className="mb-3 password" controlId="formBasicPassword">
+                                        <TextField type="password" name="password" placeholder="Password" />
+                                        <Form.Text >
                                 
                                             <Forgetpassmodel 
                                             show={modalShow}
@@ -72,18 +82,15 @@ const SignUp = () => {
                                         </Form.Text>
                                     </Form.Group>
 
-                                    <Form.Group className="mb-3 password" controlId="formBasicPassword">
-                                        <TextField type="password" name="password" placeholder="Password" />
-                                        <Form.Text className="text-muted">
-                                            Comment Here
-                                        </Form.Text>
-                                    </Form.Group>
-
                                     <div className="btn-submit">
+
                                         <Button variant="dark" type="submit">
                                             Log In
                                         </Button>
                                     </div>
+                                    <p variant="primary" className="dont-have-account" >
+                Don't have an account? <Link className="forget-password" to="signup" >Sign Up</Link>
+            </p>
                                 </Form>
                             </Card.Body>
                         </Card>

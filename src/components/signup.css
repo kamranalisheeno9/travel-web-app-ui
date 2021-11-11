@@ -31,8 +31,11 @@
     color: black;
     font-size: 16px;
 }
-.drop-down{
-    margin-bottom: 5%;
+.drop-down-country{
+    color: black;
+
+}
+.drop-down-country:disabled{
     color: gray;
 }
 .signin-btn{
@@ -43,4 +46,14 @@
 }
 .card-class{
     margin: 0 auto;
+}
+.two-inputs{
+    display: flex;
+    justify-content: space-between;
+}
+.inputs-two{
+    margin: 2px;
+}
+.already-account{
+    text-align: center;
 }

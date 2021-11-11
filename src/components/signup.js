@@ -47,6 +47,10 @@ const SignUp = (props) => {
       .required('Required'),
     passport: yup.string()
       .required('Required'),
+    contact: yup.string()
+      .required('Required'),
+    address: yup.string()
+      .required('Required'),
   })
 
   const [users, setUsers] = useState([])
@@ -63,6 +67,9 @@ const SignUp = (props) => {
         group1:'',
         password: '',
         Confirmpassword: '',
+        contact: '',
+        address: '',
+        email: '',
       }}
       onSubmit={values => {
         users.push(values)
@@ -87,7 +94,7 @@ const SignUp = (props) => {
         </Col>
                     <Col md={4} >
 <Container className="signup-container">
-            <Card  className="card-class" style={{ width: '18rem', }}>
+            <Card  className="card-class" style={{ width: '22rem', }}>
             <Card.Body className="cardBody">
               <Card.Title className="signup-title">Sign Up</Card.Title>
 
@@ -95,16 +102,28 @@ const SignUp = (props) => {
             <ListGroup className="list-group-flush">
             </ListGroup>
             <Card.Body>
-              <Form >
-
-                <Form.Group  controlId="formBasicPassword">
+              <Form onSubmit={formik.handleSubmit}  >
+              <div className="two-inputs">
+                <Form.Group className="inputs-two"  controlId="formBasicPassword">
                   <TextField type="text" name="firstName" placeholder="First Name" />
                 </Form.Group>
 
-                <Form.Group  controlId="formBasicPassword">
+                <Form.Group className="inputs-two"  controlId="formBasicPassword">
                   <TextField type="text" name="lastName" placeholder="Last Name" />
                 </Form.Group>
+</div>
+              <div className="two-inputs">
+                <Form.Group className="inputs-two"  controlId="formBasicPassword">
+                  <TextField type="text" name="contact" placeholder="Contact Number" />
+                </Form.Group>
 
+                <Form.Group className="inputs-two"  controlId="formBasicPassword">
+                  <TextField type="text" name="email" placeholder="Email ID" />
+                </Form.Group>
+</div>
+            <Form.Group  controlId="formBasicPassword">
+                  <TextField type="text" name="address" placeholder="Address" />
+                </Form.Group>
                 <Form.Group  controlId="formBasicEmail">
                   <Form.Text className="srilankan">
                     Are You Sri Lankan ?
@@ -133,8 +152,8 @@ const SignUp = (props) => {
                   </div>
                 ))}
 
-
-                <Form.Select className="drop-down" disabled={checked ? true : false} aria-label="Default select example">
+                  
+                <Form.Select className="drop-down-country" disabled={checked ? true : false} aria-label="Default select example">
                   <option>Select Country</option>
                   <option value="Country1">Country 1</option>
                   <option value="Country2">Country 2</option>
@@ -146,23 +165,19 @@ const SignUp = (props) => {
 
                 </Form.Group>
 
-
                 <Form.Group  controlId="formBasicPassword">
                   <TextField type="text" name="passport" placeholder="Passport/NIC" />
                 </Form.Group>
+                <div className="two-inputs">
 
-                <Form.Group  controlId="formBasicPassword">
+                <Form.Group className="inputs-two"  controlId="formBasicPassword">
                   <TextField type="password" name="password" placeholder="Password" />
-                  <Form.Text className="text-muted">
-                    Comment Here
-                  </Form.Text>
+                
                 </Form.Group>
-                <Form.Group  controlId="formBasicPassword">
+                <Form.Group className="inputs-two" controlId="formBasicPassword">
                   <TextField type="password" name="Confirmpassword" placeholder="Confirm Password" />
-                  <Form.Text className="text-muted">
-                    Comment Here
-                  </Form.Text>
                 </Form.Group>
+                </div>
                 <Form.Group  controlId="formBasicCheckbox">
     <Form.Check type="checkbox" onClick={()=>setAgreement(!agreement)} label="I agree the terms and conditions" />
   </Form.Group>
@@ -171,8 +186,8 @@ const SignUp = (props) => {
                     Sign Up
                   </Button>
                 </div>
-                <Form.Group  controlId="formBasicPassword">
-                  <Form.Text className="">
+                <Form.Group  className="already-account" controlId="formBasicPassword">
+                  <Form.Text >
                     Already have an account? <Link className="signin-btn" to="/signin" >Sign in</Link>
                   </Form.Text>
                 </Form.Group>

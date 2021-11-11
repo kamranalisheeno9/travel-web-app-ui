@@ -4,7 +4,7 @@ import { Form } from 'react-bootstrap'
 const TextField = ({ ...props }) => {
     const [field, meta] = useField(props)
     return (
-        <div className="mb-2">
+        <div className="">
             <Form.Group  controlId="formBasicPassword" >
                 <Form.Label>{props.label}</Form.Label>
                 <Form.Control type="text" name={props.name} placeholder={props.name}

@@ -31,17 +31,9 @@ const PaymentProceed = (props) => {
       <Container className="payment-procedure-container">
       <h2 className="p-procedure-title">Payment Details</h2>
 
-        <Row >
-          <Col className="payment-booking-details" lg={3} >
-            <h5>Booking Details</h5>
-            <br />
-            <h6>Tour</h6>
-            <p>Code:</p>
-            <p>Data:</p>
-            <p>No. of People</p>
-            <p>Total Price:</p>
-          </Col>
-          <Col lg={8} >
+        <Row className="justify-content-md-center" >
+         
+          <Col lg={10} >
             <Row className="payment-main-container">
               <Col >
                 <Row className="profile-container">

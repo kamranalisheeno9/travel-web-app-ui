@@ -33,11 +33,9 @@ const NavbarComp = (props) => {
 
         <ul className="footer-links">
           <li className="header-link">FAQs</li>
-          <li><Link className="footer-bar-link">Company Policies</Link></li>
-          <li><Link className="footer-bar-link">Book Ticket</Link></li>
-          <li><Link className="footer-bar-link">Status Report</Link></li>
-          <li><Link className="footer-bar-link">Cancelation Status </Link></li>
-          <li><Link className="footer-bar-link">Confimation Status</Link></li>
+          <li><Link className="footer-bar-link" to="policies">Policies</Link></li>
+          <li><Link className="footer-bar-link" to="activities" > Activities</Link></li>
+          <li><Link className="footer-bar-link" to="booktour">Packages</Link></li>
         </ul>
       </Col>
       <Col md={3} sm={6}>

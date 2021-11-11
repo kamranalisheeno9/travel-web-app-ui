@@ -48,7 +48,11 @@ const PackageDetail = (props) => {
           </Col>
         <Col className="package-detail-box" lg={2} sm={5} >
          <h6> Package Price</h6>
-         <p>{props.packageCurrent.Price } $/Person <span> <Button className="book-now"> <Link to="/confirmbooking"> Book Now </Link> </Button> </span></p>
+         <p>{props.packageCurrent.Price } $/Person 
+         <br /> 
+         <Button className="book-now"> <Link to="/reservepackage"> Reserve </Link> </Button>
+         <Button className="book-now"> <Link to="/confirmbooking"> Book Now </Link> </Button>
+         </p>
           </Col>
       </Row>
       <Row className="justify-content-around ">

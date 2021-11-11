@@ -1,12 +1,19 @@
 import './useraccount.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Form,Tabs,Tab, Button, Row, Col, } from 'react-bootstrap';
+import { Container, Form,Tabs,Tab, Button, Row, Col,Dropdown,DropdownButton } from 'react-bootstrap';
 import NavbarComp from '../components/navbar';
 import ProfileImage from '../assets/images/member3.jpg'
 import FooterComp from '../components/footer';
 import UpdateProfileModal from '../components/useraccount-model';
 import DatePicker from "react-datepicker";
+import {BsFillPersonFill} from 'react-icons/bs'
 import { useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 const UserAccount = () => {
   const [modalShow, setModalShow] = useState(false);
 const [startDate, setStartDate] = useState(new Date());
@@ -93,6 +100,18 @@ const [pprice,setPprice]=useState("XX $")
 >
   <Tab eventKey="customer" title="Customers">
   <Container fluid className="profile-container user-profile-container">
+  <div className="icon-logout">
+        <DropdownButton className="drop-btn"
+        key="start"
+        id={`dropdown-button-drop-start`}
+        drop="start"
+        variant="secondary"
+        title={<BsFillPersonFill />}
+      >
+        <Dropdown.Item eventKey="1">John Andrew</Dropdown.Item>
+        
+      </DropdownButton>
+  </div>
     <h3 className="profile-header">User Account Control</h3>
     <h6>Account Information</h6>
       <Row className="inner-profile-container">
@@ -177,6 +196,18 @@ const [pprice,setPprice]=useState("XX $")
   </Tab>
   <Tab eventKey="registerstaff" title="Register Staff">
   <Container fluid className="profile-container user-profile-container">
+  <div className="icon-logout">
+        <DropdownButton className="drop-btn"
+        key="start"
+        id={`dropdown-button-drop-start`}
+        drop="start"
+        variant="secondary"
+        title={<BsFillPersonFill />}
+      >
+        <Dropdown.Item eventKey="1">Carl Pang</Dropdown.Item>
+        
+      </DropdownButton>
+  </div>
     <h5>Create an Account</h5>
       <Row className="inner-profile-container">
         <Col md={4} xs={6}>
@@ -237,6 +268,18 @@ const [pprice,setPprice]=useState("XX $")
   </Tab>
   <Tab eventKey="updateadmin" title="Update Admin">
   <Container fluid className="profile-container user-profile-container">
+  <div className="icon-logout">
+        <DropdownButton className="drop-btn"
+        key="start"
+        id={`dropdown-button-drop-start`}
+        drop="start"
+        variant="secondary"
+        title={<BsFillPersonFill />}
+      >
+        <Dropdown.Item eventKey="1">Carl Pang</Dropdown.Item>
+        
+      </DropdownButton>
+  </div>
     <h5>Account Information</h5>
       <Row className="inner-profile-container">
         <Col md={4} xs={6}>
@@ -297,6 +340,18 @@ const [pprice,setPprice]=useState("XX $")
   </Tab>
   <Tab eventKey="createpackages" title="Create Packages">
   <Container fluid className="profile-container user-profile-container">
+  <div className="icon-logout">
+        <DropdownButton className="drop-btn"
+        key="start"
+        id={`dropdown-button-drop-start`}
+        drop="start"
+        variant="secondary"
+        title={<BsFillPersonFill />}
+      >
+        <Dropdown.Item eventKey="1">Anaya Peace</Dropdown.Item>
+        
+      </DropdownButton>
+  </div>
     <h5>Package Information</h5>
       <Row className="inner-profile-container">
         <Col md={4} xs={6}>
@@ -394,6 +449,18 @@ const [pprice,setPprice]=useState("XX $")
   </Tab>
   <Tab eventKey="Update Packages" title="Update Packages">
   <Container fluid className="profile-container user-profile-container">
+  <div className="icon-logout">
+        <DropdownButton className="drop-btn"
+        key="start"
+        id={`dropdown-button-drop-start`}
+        drop="start"
+        variant="secondary"
+        title={<BsFillPersonFill />}
+      >
+        <Dropdown.Item eventKey="1">Anaya Peace</Dropdown.Item>
+        
+      </DropdownButton>
+  </div>
     <h5>Package Information</h5>
       <Row className="inner-profile-container">
         <Col md={4} xs={6}>

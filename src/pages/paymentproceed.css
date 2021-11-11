@@ -111,7 +111,12 @@
     text-transform: uppercase;
     margin-bottom: 3%;
 }
-
+.active-profile{
+    margin-bottom: 20px;
+}
+.profile-container{
+    margin-top: 0px !important;
+}
 
 
 @media only screen and (max-width:470px) {

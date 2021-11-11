@@ -1,4 +1,4 @@
-import './cancelledpayment.css';
+import './reservepackage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComp from '../components/navbar';
 import FooterComp from '../components/footer';
@@ -10,7 +10,7 @@ import {
   Link
 } from "react-router-dom";
 import { useState } from 'react';
-const PaymentCancelled = () => {
+const PackageReversed = () => {
 
 
   return (
@@ -23,7 +23,7 @@ const PaymentCancelled = () => {
    <div className="cancelledpayment-page">
         <div className="cancelledpayment-page-layer">
 
-      <p className="cancelledpayment-title">Payment Cancelled</p>
+      <p className="cancelledpayment-title">Reserved Package</p>
     </div>
     </div>
     
@@ -32,9 +32,10 @@ const PaymentCancelled = () => {
         <Row className="payment-confirm-container" >
           
                      <Col lg={10}  className="confirmation-text cancelled-text">
-                       <h4>Payment Cancelled</h4>
-                       <h6>Sorry! you have cancelled your tour payment!</h6>
-                       <p >Lorem Ipsum passages, and more recently with desktop publishing software like Aldus of Lorem Ipsum. </p>
+                       <h4>You Have Reserved The Package</h4>
+                       <p >
+                        <h6 className="reservation-note"> Please note that the reservation would get cancelled after 15 days from now on..</h6><br />
+                         Kindly contact us the given email or contact number if you have any concerns to be raised. </p>
                      <Col md={2}  className="confirmation-text canclled-btns">
                      <Button className="book-now feedback-btn confirm"> <Link to="/">Back to home </Link> </Button>
                 <Button className="book-now feedback-btn cancel"> <Link to="/booktour">Select a new tour </Link> </Button>
@@ -48,4 +49,4 @@ const PaymentCancelled = () => {
   );
 }
 
-export default PaymentCancelled;
+export default PackageReversed;

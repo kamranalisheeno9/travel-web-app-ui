@@ -1,12 +1,18 @@
 import './profile.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Form, Button, Row, Col, } from 'react-bootstrap';
 import NavbarComp from '../components/navbar';
+import { Container, Dropdown,DropdownButton, Button, Row, Col, } from 'react-bootstrap';
 import ProfileImage from '../assets/images/member3.jpg'
 import FooterComp from '../components/footer';
 import UpdateProfile from '../components/updateprofile';
-
+import {BsFillPersonFill} from 'react-icons/bs'
 import { useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 const Profile = () => {
   const [modalShow, setModalShow] = useState(false);
   
@@ -27,6 +33,20 @@ const Profile = () => {
 
         </div>
    <Container className="profile-container">
+   <div className="icon-logout">
+        <DropdownButton className="drop-btn"
+        key="start"
+        id={`dropdown-button-drop-start`}
+        drop="start"
+        variant="secondary"
+        title={<BsFillPersonFill />}
+      >
+        <Dropdown.Item eventKey="1">John Andrew</Dropdown.Item>
+        <Button className="profile-btn user-profile"><Link to="profile" > User Profile</Link> </Button><br />
+        <Button className="profile-btn user-profile"><Link to="signin" > Sign Out</Link> </Button>
+        
+      </DropdownButton>
+  </div>
     <h3 className="profile-header">User Profile</h3>
     <h6>Account Information</h6>
       <Row className="inner-profile-container">
@@ -48,8 +68,9 @@ const Profile = () => {
           <p className="input-values">{country}</p>
           <Button className="profile-btn">None</Button>
         </Col>
+        
         <Col md={4}  className="profile-image-container">
-
+       
           <img className="profile-image" src={ProfileImage} />
           <h5>Johns Andrew</h5>
           <UpdateProfile 

@@ -11,11 +11,12 @@
 }
 .profile-container{
     background-color: black;
-    margin: 5% auto;
+    margin: 3% auto !important;
     color: white;
     padding: 5%;
+    padding-top: 2% !important;
     font-family: 'Roboto Condensed', sans-serif;
-
+    margin-top: 3% !important;
 }
 .input-titles{
     padding: 5px 5px ;
@@ -86,8 +87,41 @@
     z-index: 1000000;
 }
 
+.icon-logout{
+    text-align: right;
+}
+.dropstart .dropdown-toggle::before {
+    display: none;
 
+}
+.drop-btn .dropdown-toggle{
+border-radius: 100%;
+width: 50px;
+height: 50px;
+font-size: 20px;
+}
+.drop-btn .dropdown-menu.show {
+    display: block;
+    background-color: #3a3a3acc;
+    margin-right: 5px;  
+    margin-top: 4px;
 
+}
+.user-profile{
+    margin: 10px;
+}
+.user-profile a{
+    text-decoration: none;
+    color: white;
+}
+.drop-btn .dropdown-item{
+    color: white;
+    font-family: 'Andada Pro', serif;
+
+}
+.drop-btn .dropdown-item:hover{
+    color: black !important;
+}
 @media only screen and (max-width:780px) {
    .input-values{
     width: 100%;
