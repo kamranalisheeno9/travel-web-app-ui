@@ -8,7 +8,7 @@ const PackageCard = (props) => {
     <Container >
       <p className="gallery-titles">Best Selling Packages</p>
       <Row className="justify-content-around">
-        <Col lg={3} sm={6} >
+        <Col lg={2} sm={6} >
           <Container className="card-package">
 
             <Card className="card-container">
@@ -27,7 +27,7 @@ const PackageCard = (props) => {
             </Card>
           </Container>
         </Col>
-        <Col lg={3} sm={6} >
+        <Col lg={2} sm={6} >
           <Container className="card-package">
 
             <Card className="card-container">
@@ -45,7 +45,7 @@ const PackageCard = (props) => {
               </ListGroup>
             </Card>
           </Container>
-        </Col> <Col lg={3} sm={6} >
+        </Col> <Col lg={2} sm={6} >
           <Container className="card-package">
 
             <Card className="card-container">
@@ -63,7 +63,26 @@ const PackageCard = (props) => {
               </ListGroup>
             </Card>
           </Container>
-        </Col> <Col lg={3} sm={6} >
+        </Col> 
+        <Col lg={2} sm={6} >
+          <Container className="card-package">
+
+            <Card className="card-container">
+              <Card.Header className="package-name">Niyama Private Islands</Card.Header>
+              <ListGroup variant="flush">
+                <ListGroup.Item className="price-package">LKR : 120000</ListGroup.Item>
+                <ListGroup.Item className="pkg-include">Package Includes </ListGroup.Item>
+                <ListGroup.Item>  3 Days 4 Nights </ListGroup.Item>
+                <ListGroup.Item>  3 Times Food  </ListGroup.Item>
+                <ListGroup.Item> Watersports </ListGroup.Item>
+                <ListGroup.Item>  Beach </ListGroup.Item>
+                <ListGroup.Item className="pkg-include">CT04 </ListGroup.Item>
+                <ListGroup.Item className="book-now-homepage">Book Now</ListGroup.Item>
+              </ListGroup>
+            </Card>
+          </Container>
+        </Col>
+        <Col lg={2} sm={6} >
           <Container className="card-package">
 
             <Card className="card-container">

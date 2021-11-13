@@ -82,6 +82,8 @@ const AboutData = (props) => {
                     <p className="member-title">Member 1</p>
 
                         </div>
+                    <p className="member-title-name">CEO</p>
+
                     </Col>
                     <Col lg={3} sm={6}>
                         <div className="member-img-container">    
@@ -89,6 +91,8 @@ const AboutData = (props) => {
                     <p className="member-title">Member 2</p>
 
                         </div>
+                    <p className="member-title-name">Finance Manager</p>
+
                     </Col>
                     <Col lg={3} sm={6}>
                         <div className="member-img-container">    
@@ -96,6 +100,8 @@ const AboutData = (props) => {
                     <p className="member-title">Member 3</p>
 
                         </div>
+                    <p className="member-title-name">IT Manager</p>
+
                     </Col>
                     <Col lg={3} sm={6}>
                         <div className="member-img-container">    
@@ -103,6 +109,8 @@ const AboutData = (props) => {
                     <p className="member-title">Member 4</p>
 
                         </div>
+                    <p className="member-title-name">HR Manager</p>
+
                     </Col>
                 </Row>
                 </Col>

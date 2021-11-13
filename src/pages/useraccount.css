@@ -73,8 +73,24 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
+.overview{
+    height: 120px;
+}
+.price{
+    margin-top: 70px !important;
+}
 @media only screen and (max-width:720px) {
     .update-user{
         margin-top: 10%;
     }
+    .overview{
+        max-height: 110px;
+        overflow: scroll;
+    }
+}
+@media only screen and (max-width:400px) {
+    .price{
+        margin-top: 40px !important;
+    }
+
 }

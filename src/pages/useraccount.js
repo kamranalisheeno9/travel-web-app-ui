@@ -60,6 +60,7 @@ const [photel1,setPhotel1]=useState("City Hotel")
 const [photel2,setPhotel2]=useState("None")
 const [pactivity1,setPactivity1]=useState("Hiking")
 const [pactivity2,setPactivity2]=useState("None")
+// const [overview,setOverview]=useState(  )
 const [pprice,setPprice]=useState("XX $")
 
   const UpdateStaff=()=>{
@@ -125,6 +126,7 @@ const [pprice,setPprice]=useState("XX $")
     <h6>Account Information</h6>
       <Row className="inner-profile-container">
         <Col md={4} xs={6}>
+          <p className="input-titles" >Passport / NIC</p>
           <p className="input-titles" >First Name</p>
           <p className="input-titles" >Last Name</p>
           <p className="input-titles">E-mail</p>
@@ -137,6 +139,13 @@ const [pprice,setPprice]=useState("XX $")
           <p className="input-titles">Customized package Approval</p>
         </Col>
         <Col md={4} xs={6}>
+          <div>
+          <Form.Select  className="mb-2 mt-0 input-values" aria-label="Default select example">
+    <option>9011811181 V</option>
+    <option>9011821182 V</option>
+    <option>9012811281 V</option>
+</Form.Select>
+          </div>
         <p className="input-values">{fname}</p>
           <p className="input-values">{lname}</p>
           <p className="input-values">{email}</p>
@@ -229,9 +238,18 @@ const [pprice,setPprice]=useState("XX $")
           <p className="input-titles mt-3 mb-4">Admin Control</p>
         </Col>
         <Col md={4} xs={6}>
-        <p className="input-values">
-        <Form.Control className="staff-input" onChange={(e)=>setId(e.target.value)} type="text" value={id} />
-          </p>
+        <div >
+
+    <Form.Select  className="mb-2 mt-1 input-values" aria-label="Default select example">
+    <option value="package1">00412</option>
+  <option value="package2">00413</option>
+  <option value="package2">00414</option>
+  <option value="package2">00415</option>
+  <option value="package2">00416</option>
+</Form.Select>
+
+            
+          </div>
         <p className="input-values">
         <Form.Control className="staff-input" onChange={(e)=>setStaffFname(e.target.value)} type="text" value={stafffname} />
           </p>
@@ -373,7 +391,8 @@ const [pprice,setPprice]=useState("XX $")
           <p className="input-titles mt-3 mb-4">Date</p>
           <p className="input-titles mt-3 mb-4">Hostel(s)</p>
           <p className="input-titles mt-3 mb-4">Activities(ies)</p>
-          <p className="input-titles mt-3 mb-4">Price Per Person</p>
+          <p className="input-titles mt-3 mb-4">Overview (Description)</p>
+          <p className="input-titles price mt-5 mb-4">Price Per Person</p>
         </Col>
         <Col md={4} xs={6}>
         <p className="input-values">
@@ -433,6 +452,9 @@ const [pprice,setPprice]=useState("XX $")
         <Form.Control className="staff-input" onChange={(e)=>setPactivity2(e.target.value)} type="text" value={pactivity2} />
           </p>
         </div>
+        <p className="input-values overview ">
+        This Package Comes As stay in two hotels city hotel and island cool hotel for 3 nights. The tourist may enjoy the activities of hiking and outdoor visits.............. 
+          </p>
         
         <div >
         <p className="input-values">
@@ -482,7 +504,8 @@ const [pprice,setPprice]=useState("XX $")
           <p className="input-titles mt-3 mb-4">Date</p>
           <p className="input-titles mt-3 mb-4">Hostel(s)</p>
           <p className="input-titles mt-3 mb-4">Activities(ies)</p>
-          <p className="input-titles mt-3 mb-4">Price Per Person</p>
+          <p className="input-titles mt-3 mb-4">Overview (Description)</p>
+          <p className="input-titles price mt-3 mb-4">Price Per Person</p>
         </Col>
         <Col md={4} xs={6}>
         <p className="input-values">
@@ -542,6 +565,9 @@ const [pprice,setPprice]=useState("XX $")
         <Form.Control className="staff-input" onChange={(e)=>setPactivity2(e.target.value)} type="text" value={pactivity2} />
           </p>
         </div>
+        <p className="input-values overview ">
+        This Package Comes As stay in two hotels city hotel and island cool hotel for 3 nights. The tourist may enjoy the activities of hiking and outdoor visits.............. 
+          </p>
         
         <div >
         <p className="input-values">

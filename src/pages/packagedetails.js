@@ -56,7 +56,7 @@ const PackageDetail = (props) => {
           </Col>
       </Row>
       <Row className="justify-content-around ">
-        <Col md={7} >
+        <Col md={11} >
         <Row>
         <Col className="package-detail-box overview" md={12} >
          <h6> Overview</h6>
@@ -72,19 +72,7 @@ const PackageDetail = (props) => {
           </Col>    
         </Row>
         </Col>
-    <Col md={4}>
-      <Row>
-        <Col className="package-detail-box mini-details" md={10} >
-         <h6> includeded In Package</h6>
-          </Col>    
-        <Col className="package-detail-box mini-details" md={10} >
-         <h6> Excluded In Package</h6>
-          </Col>
-        <Col className="package-detail-box mini-details" md={10} >
-         <h6>Additional Information</h6>
-          </Col>
-      </Row>
-      </Col>
+   
       </Row>
     </Container>
     </div>
