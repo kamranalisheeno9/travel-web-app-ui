@@ -60,7 +60,7 @@ const [photel1,setPhotel1]=useState("City Hotel")
 const [photel2,setPhotel2]=useState("None")
 const [pactivity1,setPactivity1]=useState("Hiking")
 const [pactivity2,setPactivity2]=useState("None")
-// const [overview,setOverview]=useState(  )
+// const [overview-package,setOverview-package]=useState(  )
 const [pprice,setPprice]=useState("XX $")
 
   const UpdateStaff=()=>{
@@ -391,7 +391,7 @@ const [pprice,setPprice]=useState("XX $")
           <p className="input-titles mt-3 mb-4">Date</p>
           <p className="input-titles mt-3 mb-4">Hostel(s)</p>
           <p className="input-titles mt-3 mb-4">Activities(ies)</p>
-          <p className="input-titles mt-3 mb-4">Overview (Description)</p>
+          <p className="input-titles mt-3 mb-4">Overview-package (Description)</p>
           <p className="input-titles price mt-5 mb-4">Price Per Person</p>
         </Col>
         <Col md={4} xs={6}>
@@ -452,7 +452,7 @@ const [pprice,setPprice]=useState("XX $")
         <Form.Control className="staff-input" onChange={(e)=>setPactivity2(e.target.value)} type="text" value={pactivity2} />
           </p>
         </div>
-        <p className="input-values overview ">
+        <p className="input-values overview-package ">
         This Package Comes As stay in two hotels city hotel and island cool hotel for 3 nights. The tourist may enjoy the activities of hiking and outdoor visits.............. 
           </p>
         
@@ -504,7 +504,7 @@ const [pprice,setPprice]=useState("XX $")
           <p className="input-titles mt-3 mb-4">Date</p>
           <p className="input-titles mt-3 mb-4">Hostel(s)</p>
           <p className="input-titles mt-3 mb-4">Activities(ies)</p>
-          <p className="input-titles mt-3 mb-4">Overview (Description)</p>
+          <p className="input-titles mt-3 mb-4">Overview-package (Description)</p>
           <p className="input-titles price mt-3 mb-4">Price Per Person</p>
         </Col>
         <Col md={4} xs={6}>
@@ -565,7 +565,7 @@ const [pprice,setPprice]=useState("XX $")
         <Form.Control className="staff-input" onChange={(e)=>setPactivity2(e.target.value)} type="text" value={pactivity2} />
           </p>
         </div>
-        <p className="input-values overview ">
+        <p className="input-values overview-package ">
         This Package Comes As stay in two hotels city hotel and island cool hotel for 3 nights. The tourist may enjoy the activities of hiking and outdoor visits.............. 
           </p>
         

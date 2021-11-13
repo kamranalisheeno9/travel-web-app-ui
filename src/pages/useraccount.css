@@ -73,7 +73,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
-.overview{
+.overview-package{
     height: 120px;
 }
 .price{
@@ -83,7 +83,7 @@
     .update-user{
         margin-top: 10%;
     }
-    .overview{
+    .overview-package{
         max-height: 110px;
         overflow: scroll;
     }
